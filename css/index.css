@@ -144,10 +144,10 @@ h2 {
 .buttonStyle {
   margin-bottom: 10px;
   width: 50%;
-  height: 30px;
+  height: 45px;
   background-color: lightblue;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   border: 1px solid black;
   border-radius: 20px;
@@ -287,10 +287,10 @@ h2 {
 .main-container header .header-content .header-middle-content button {
   margin-bottom: 10px;
   width: 50%;
-  height: 30px;
+  height: 45px;
   background-color: lightblue;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   border: 1px solid black;
   border-radius: 20px;

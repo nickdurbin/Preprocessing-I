@@ -132,16 +132,37 @@ table {
 }
 html,
 body {
-  height: 100%;
+  height: auto;
   font-size: 62.5%;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+.buttonStyle {
+  margin-bottom: 10px;
+  width: 50%;
+  height: 40px;
+  background-color: lightblue;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 3rem ;
+  cursor: pointer;
 }
 .contentBox {
-  width: 30vw;
-  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
   border: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
+  padding: 2%;
+  margin: 20px 0;
 }
 .flexBox-c {
   display: flex;
@@ -160,11 +181,31 @@ body {
   width: 100%;
 }
 .fontStyle {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-family: 'Roboto', sans-serif;
 }
+.mainContent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+}
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
+  border: 1px solid black;
+  background: #bcddf1;
+}
 .main-container {
-  max-width: 90vw;
+  max-width: 880px;
+  width: 100%;
   margin: 0 auto;
 }
 .main-container header {
@@ -174,9 +215,8 @@ body {
   justify-items: center;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-family: 'Roboto', sans-serif;
-  height: 40vh;
 }
 .main-container header .nav-container {
   display: flex;
@@ -185,8 +225,8 @@ body {
   justify-items: center;
   justify-content: space-evenly;
   width: 100%;
-  background-color: black;
-  height: 5vh;
+  background-image: linear-gradient(to top left, black, gray);
+  height: 50px;
   padding: 2rem;
 }
 .main-container header .nav-container a {
@@ -204,15 +244,30 @@ body {
   justify-items: center;
   justify-content: space-evenly;
   width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content {
+    flex-flow: column nowrap;
+    height: auto;
+  }
 }
 .main-container header .header-content .header-left-content {
-  width: 30vw;
-  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
   border: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
+  padding: 2%;
+  margin: 20px 0;
   background-color: #bcddf1;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-left-content {
+    width: 100vw;
+    flex-direction: row;
+  }
 }
 .main-container header .header-content .header-left-content img {
   max-width: 100%;
@@ -221,29 +276,131 @@ body {
   border-radius: 2rem;
 }
 .main-container header .header-content .header-middle-content {
-  width: 30vw;
-  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
   border: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
+  padding: 2%;
+  margin: 20px 0;
+}
+.main-container header .header-content .header-middle-content button {
+  margin-bottom: 10px;
+  width: 50%;
+  height: 40px;
+  background-color: lightblue;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 3rem ;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-middle-content {
+    width: 100%;
+  }
 }
 .main-container header .header-content .header-right-content {
-  width: 30vw;
-  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
   border: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
+  padding: 2%;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-right-content {
+    width: 100%;
+  }
+}
+.main-container header .header-content .header-right-content ul {
+  list-style-type: circle;
+  list-style-position: inside;
 }
 .main-container .main-content {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   align-items: center;
   justify-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  height: 60vh;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container .main-content {
+    height: auto;
+  }
+}
+.main-container .main-content .work-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
   border: 1px solid black;
-  margin-top: 2vh;
+  background: #bcddf1;
+}
+.main-container .main-content .work-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.main-container .main-content .education-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
+  border: 1px solid black;
+  background: #bcddf1;
+}
+.main-container .main-content .education-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.main-container footer {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-container footer .nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to top left, black, gray);
+  height: 50px;
+  padding: 2rem;
+}
+.main-container footer .nav-container a {
+  text-decoration: none;
+  color: silver;
+}
+.main-container footer .nav-container a:hover {
+  color: white;
+  transform: scale(1.2);
 }

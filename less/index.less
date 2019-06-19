@@ -54,17 +54,48 @@ table {
 }
 
 html, body {
-		height: 100%;
+		height: auto;
 		font-size: 62.5%;
+		line-height: 1.5;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	font-family: @font-fam;
+}
+
+// Variables
+
+@bg-color: rgb(188, 221, 241);
+@font-fam: 'Roboto', sans-serif;
+@nav-bg: linear-gradient(to top left, black, gray);
+
+// Mixins
+
+.buttonStyle {
+	margin-bottom: 10px;
+	width: 50%;
+	height: 40px;
+	background-color: lightblue;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 3rem ;
+	cursor: pointer;
 }
 
 .contentBox {
-	width: 30vw;
-	height: 33vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 33%;
+	height: 350px;
 	border: 1px solid black;
-	margin: 0 auto;
-	text-align: center;
-	padding: 2rem;
+	padding: 2%;
+	margin: 20px 0;
 }
 
 .flexBox-c {
@@ -86,23 +117,51 @@ html, body {
 }
 
 .fontStyle {
-	font-size: 1.6rem;
-	font-family: 'Roboto', sans-serif;
+	font-size: 1.3rem;
+	font-family: @font-fam;
 }
 
+.mainContent {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+	padding: 2%;
+	height: 300px;
+	width: 66.4%;
+	border: 1px solid black;
+}
+
+.titleBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	width: 33%;
+	border: 1px solid black;
+	background: @bg-color;
+}
+
+// Main LESS Styling
+
 .main-container {
-	max-width: 90vw;
+	max-width: 880px;
+	width: 100%;
 	margin: 0 auto;
 
+	// @media (max-width: 500px) {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// }
+		
 	header {
 		.flexBox-c();
 		.fontStyle();
-		height: 40vh;
 		
 		.nav-container {
 			.flexBox-r();
-			background-color: black;
-			height: 5vh;
+			background-image: @nav-bg;
+			height: 50px;
 			padding: 2rem;
 
 			a {
@@ -118,10 +177,21 @@ html, body {
 
 		.header-content {
 			.flexBox-r();
+			margin: 0 auto;
+
+			@media (max-width: 500px) {
+				flex-flow: column nowrap;
+				height: auto;
+			}
 
 			.header-left-content {
 				.contentBox();
-				background-color: rgb(188, 221, 241);
+				background-color: @bg-color;
+
+				@media (max-width: 500px) {
+					width: 100vw;
+					flex-direction: row;
+				}
 
 				img {
 					max-width: 100%;
@@ -133,18 +203,79 @@ html, body {
 
 			.header-middle-content {
 				.contentBox();
-			}
+
+				button {
+				.buttonStyle();
+				}
+
+				@media (max-width: 500px) {
+					width: 100%;
+				}
+			}	
 
 			.header-right-content {
-				.contentBox();		
+				.contentBox();
+
+				@media (max-width: 500px) {
+					width: 100%;
+				}
+
+				ul {
+					list-style-type: circle;
+					list-style-position: inside;
+				}
 			}
 		}
 	}
 
 	.main-content {
-		.flexBox-c();
-		height: 60vh;
-		border: 1px solid black;
-		margin-top: 2vh;
+		.flexBox-r();
+		flex-wrap: wrap;
+		margin: 0 auto;
+
+		@media (max-width: 500px) {
+			height: auto;
+		}
+
+		.work-title {
+			.titleBox();
+		}
+
+		.work-container {
+			.mainContent();
+			.fontStyle();
+		}
+
+		.education-title {
+			.titleBox();
+		}
+
+		.education-container {
+			.mainContent();
+			.fontStyle();
+		}
+	}
+
+	footer {
+		width: 100%;
+		margin-top: 20px;
+
+		.nav-container {
+			.flexBox-r();
+			.fontStyle();
+			background-image: @nav-bg;
+			height: 50px;
+			padding: 2rem;
+
+			a {
+				text-decoration: none;
+				color: silver;
+			}
+
+			a:hover {
+				color: white;
+				transform: scale(1.2);
+			}
+		}
 	}
 }

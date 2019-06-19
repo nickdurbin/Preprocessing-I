@@ -1,1 +1,405 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: auto;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+.buttonStyle {
+  margin-bottom: 10px;
+  width: 50%;
+  height: 45px;
+  background-color: lightblue;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
+  border: 1px solid black;
+  padding: 2%;
+  margin: 20px 0;
+}
+.flexBox-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.flexBox-r {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.fontStyle {
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.mainContent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+}
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
+  border: 1px solid black;
+  background: #bcddf1;
+}
+.main-container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main-container header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.main-container header .nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-image: linear-gradient(to top left, black, gray);
+  height: 50px;
+  padding: 2rem;
+}
+.main-container header .nav-container a {
+  text-decoration: none;
+  color: silver;
+}
+.main-container header .nav-container a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+.main-container header .header-content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content {
+    flex-flow: column nowrap;
+    height: auto;
+  }
+}
+.main-container header .header-content .header-left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
+  border: 1px solid black;
+  padding: 2%;
+  margin: 20px 0;
+  background-color: #bcddf1;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-left-content {
+    width: 100vw;
+    flex-direction: row;
+  }
+}
+.main-container header .header-content .header-left-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+.main-container header .header-content .header-middle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
+  border: 1px solid black;
+  padding: 2%;
+  margin: 20px 0;
+}
+.main-container header .header-content .header-middle-content button {
+  margin-bottom: 10px;
+  width: 50%;
+  height: 45px;
+  background-color: lightblue;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-middle-content {
+    width: 100%;
+  }
+}
+.main-container header .header-content .header-right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 350px;
+  border: 1px solid black;
+  padding: 2%;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .main-container header .header-content .header-right-content {
+    width: 100%;
+  }
+}
+.main-container header .header-content .header-right-content ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  line-height: 1.7;
+}
+.main-container .main-content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .main-container .main-content {
+    height: auto;
+  }
+}
+.main-container .main-content .work-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
+  border: 1px solid black;
+  background: #bcddf1;
+}
+.main-container .main-content .work-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.main-container .main-content .education-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 33%;
+  border: 1px solid black;
+  background: #bcddf1;
+}
+.main-container .main-content .education-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  height: 300px;
+  width: 66.4%;
+  border: 1px solid black;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.main-container footer {
+  width: 100%;
+  margin-top: 20px;
+}
+.main-container footer .nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to top left, black, gray);
+  height: 50px;
+  padding: 2rem;
+}
+.main-container footer .nav-container a {
+  text-decoration: none;
+  color: silver;
+}
+.main-container footer .nav-container a:hover {
+  color: white;
+  transform: scale(1.2);
+}

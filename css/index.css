@@ -144,14 +144,13 @@ h2 {
 .buttonStyle {
   margin-bottom: 10px;
   width: 50%;
-  height: 40px;
+  height: 30px;
   background-color: lightblue;
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
   border: 1px solid black;
   border-radius: 20px;
-  box-shadow: 3rem ;
   cursor: pointer;
 }
 .contentBox {
@@ -288,14 +287,13 @@ h2 {
 .main-container header .header-content .header-middle-content button {
   margin-bottom: 10px;
   width: 50%;
-  height: 40px;
+  height: 30px;
   background-color: lightblue;
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
   border: 1px solid black;
   border-radius: 20px;
-  box-shadow: 3rem ;
   cursor: pointer;
 }
 @media (max-width: 500px) {
@@ -321,6 +319,7 @@ h2 {
 .main-container header .header-content .header-right-content ul {
   list-style-type: circle;
   list-style-position: inside;
+  line-height: 1.7;
 }
 .main-container .main-content {
   display: flex;
